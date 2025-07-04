@@ -186,21 +186,53 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 'ex81', name: 'Skullcrusher (Barbell)', muscle: 'Triceps' },
         { id: 'ex82', name: 'Skullcrusher (Dumbbell)', muscle: 'Triceps' },
         { id: 'ex83', name: 'Biceps', muscle: 'تمارين عضلات الباي سيبس' },
+        { id: 'ex84', name: 'Bicep Curl (Dumbbell)', muscle: 'Biceps' },
+        { id: 'ex85', name: 'Hammer Curl (Dumbbell)', muscle: 'Biceps' },
+        { id: 'ex86', name: 'Bicep Curl (Barbell)', muscle: 'Biceps' },
+        { id: 'ex87', name: 'Bicep Curl Ruler (Cable)', muscle: 'Biceps' },
+        { id: 'ex88', name: 'Bicep Curl (Machine)', muscle: 'Biceps' },
+        { id: 'ex89', name: 'Concentration curl', muscle: 'Biceps' },
+        { id: 'ex90', name: 'EZ Bar Biceps Curl', muscle: 'Biceps' },
+        { id: 'ex91', name: 'Hammer Curl (Cable)', muscle: 'Biceps' },
+        { id: 'ex92', name: 'Overhead Curl (Cable)', muscle: 'Biceps' },
+        { id: 'ex93', name: 'Single Arm Overhead Curl (Cable)', muscle: 'Biceps' },
+        { id: 'ex94', name: 'Preacher Curl (Machine)', muscle: 'Biceps' },
+        { id: 'ex95', name: 'Preacher Curl (Dumbbell)', muscle: 'Biceps' },
+        { id: 'ex96', name: 'Single Arm Preacher Curl (Dumbbell)', muscle: 'Biceps' },
+        { id: 'ex97', name: 'Seated incline Curl (Dumbbell)', muscle: 'Biceps' },
+        { id: 'ex98', name: 'Spider Curl (BarBell)', muscle: 'Biceps' },
+        { id: 'ex99', name: 'Shoulders', muscle: 'تمارين عضلات الكتف' },
+        { id: 'ex100', name: 'Face Pull (Cable)', muscle: 'Shoulders' },
+        { id: 'ex101', name: 'Lateral Raise (Dumbbell)', muscle: 'Shoulders' },
+        { id: 'ex102', name: 'Lateral Raise (Cable Shorted)', muscle: 'Shoulders' },
+        { id: 'ex103', name: 'Single Arm Lateral Raise (Cable Shorted)', muscle: 'Shoulders' },
+        { id: 'ex104', name: 'Lateral Raise (Cable Lenght)', muscle: 'Shoulders' },
+        { id: 'ex105', name: 'Single Arm Lateral Raise (Cable Lenght)', muscle: 'Shoulders' },
+        { id: 'ex106', name: 'Shoulder Press (Dumbbell)', muscle: 'Shoulders' },
+        { id: 'ex107', name: 'Shoulder Press (Machine)', muscle: 'Shoulders' },
+        { id: 'ex108', name: 'Y Raises (Cable)', muscle: 'Shoulders' },
+        { id: 'ex109', name: 'Front Raise (Cable)', muscle: 'Shoulders' },
+        { id: 'ex110', name: 'Front Raise (Dumbbell)', muscle: 'Shoulders' },
+        { id: 'ex111', name: 'Lateral Raise (Machine)', muscle: 'Shoulders' },
+        { id: 'ex112', name: 'Single Rear Delt Reverse Fly (Cable)', muscle: 'Shoulders' },
+        { id: 'ex113', name: 'Rear Delt Reverse Fly (Cable)', muscle: 'Shoulders' },
+        { id: 'ex114', name: 'Rear Delt Reverse Fly (Dumbbell)', muscle: 'Shoulders' },
+        { id: 'ex115', name: 'Single Arm Rear Delt Bahaa (Cable)', muscle: 'Shoulders' },
+        { id: 'ex116', name: 'Rear Delt Reverse Fly (Machine)', muscle: 'Shoulders' },
+        { id: 'ex117', name: 'Single Arm Rear Delt Reverse Fly (Machine)', muscle: 'Shoulders' },
+        { id: 'ex118', name: 'Seated Lateral Raise (Dumbbell)', muscle: 'Shoulders' },
+        { id: 'ex119', name: 'Rotator Cuff (Cable)', muscle: 'Shoulders' },
+        { id: 'ex120', name: 'Forearms', muscle: 'تمارين عضلات الساعد والريست و الرقبه' },
+        { id: 'ex121', name: 'Reverse Curl Ruler بالشداد أو بدون الشداد (Cable)', muscle: 'Forearms' },
+        { id: 'ex122', name: 'Single Arm Flexors (Cable)', muscle: 'Forearms' },
+        { id: 'ex123', name: 'Ruler Flexors من فوق (Cable)', muscle: 'Forearms' },
+        { id: 'ex124', name: 'ساعد دامبل وانت قاعد ', muscle: 'Forearms' },
+        { id: 'ex125', name: 'بالمسطره وانت معكوس ريست (Cable)', muscle: 'Forearms' },
+        { id: 'ex126', name: 'Lying Neck Curls Weighted', muscle: 'رقبه' },
+        { id: 'ex127', name: 'Lying Neck Extension Weighted', muscle: 'رقبه' },
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
     ];
 
     // Helper to save routines to Local Storage
