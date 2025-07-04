@@ -1,37 +1,26 @@
 /* General Styles */
 html, body {
-    /* تجعل html و body تأخذ الارتفاع والعرض الكاملين للمستند */
     height: 100%;
-    width: 100%; /* تأكد من أن العرض 100% */
+    width: 100%;
     margin: 0;
     padding: 0;
-    /* لون الخلفية الأساسية، يجب أن يكون هو نفسه لون خلفية المحتوى لضمان عدم وجود حواف بيضاء */
     background-color: #354b6b;
-    /* إزالة خصائص flexbox من body لأنها كانت تسبب تمركز المحتوى وترك الحواف */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    overflow: hidden; /* يمنع ظهور أشرطة التمرير على مستوى الصفحة بالكامل */
+    overflow: hidden;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    /* خصائص إضافية لـ body إذا لزم الأمر، لكن الأهم تم التعامل معه في html, body */
 }
 
 .app-container {
     width: 100%;
-    /* إزالة max-width لكي يملأ التطبيق عرض الشاشة بالكامل */
-    /* max-width: 400px; */
-    /* ضمان أن الحاوية تأخذ الارتفاع الكامل للعنصر الأب (body) */
     height: 100%;
-    /* يمكنك إزالة box-shadow إذا لم تعد ترغب في هذا التأثير مع إزالة الحواف */
+    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff; /* لون خلفية منطقة التطبيق الرئيسية (البيضاء) */
     display: flex;
     flex-direction: column;
-    position: relative; /* For stacking screens */
-    overflow: hidden; /* Hide content overflow for smooth transitions */
+    position: relative;
+    overflow: hidden;
 }
 
 /* Screen Management */
@@ -40,20 +29,20 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* ضمان أن الشاشات الفرعية تملأ ارتفاع .app-container */
+    height: 100%;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease-in-out;
-    transform: translateX(100%); /* Initially off-screen to the right */
-    overflow-y: auto; /* Allow scrolling for content */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    z-index: 1; /* Default z-index */
+    transform: translateX(100%);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1;
 }
 
 .screen.active {
-    transform: translateX(0%); /* Bring active screen into view */
-    z-index: 2; /* Bring active screen to front */
+    transform: translateX(0%);
+    z-index: 2;
 }
 
 /* Header Styles */
@@ -69,8 +58,8 @@ body {
     font-size: 18px;
     position: sticky;
     top: 0;
-    z-index: 10; /* Ensure header is above content */
-    flex-shrink: 0; /* يمنع الهيدر من التقلص في Flexbox */
+    z-index: 10;
+    flex-shrink: 0;
 }
 
 .header h1 {
@@ -102,7 +91,7 @@ body {
 .header .header-button {
     background: none;
     border: none;
-    color: #007aff; /* iOS blue */
+    color: #007aff;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -113,9 +102,8 @@ body {
 .content {
     flex-grow: 1;
     padding: 15px;
-    background-color: #354b6b; /* لون الخلفية الزرقاء الداكنة للمحتوى */
-    /* استخدام calc و env(safe-area-inset-bottom) للتعامل مع النوتش وأشرطة الإيماءات في الهواتف الحديثة */
-    padding-bottom: calc(70px + env(safe-area-inset-bottom)); /* Space for bottom nav */
+    background-color: #354b6b;
+    padding-bottom: calc(70px + env(safe-area-inset-bottom));
 }
 
 /* Buttons */
@@ -141,7 +129,7 @@ button {
 }
 
 .secondary-button {
-    background-color: #e6f2ff; /* Light blue */
+    background-color: #e6f2ff;
     color: #007aff;
     border-radius: 10px;
     padding: 15px;
@@ -170,7 +158,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    cursor: pointer; /* Make cards clickable */
+    cursor: pointer;
 }
 
 .routine-card .routine-details h3 {
@@ -199,9 +187,8 @@ button {
     bottom: 0;
     width: 100%;
     z-index: 10;
-    /* استخدام calc و env(safe-area-inset-bottom) للتعامل مع النوتش وأشرطة الإيماءات */
     padding-bottom: calc(10px + env(safe-area-inset-bottom));
-    flex-shrink: 0; /* يمنع شريط التنقل السفلي من التقلص */
+    flex-shrink: 0;
 }
 
 .bottom-nav .nav-item {
@@ -248,7 +235,7 @@ button {
 }
 
 .delete-routine-button {
-    background-color: #d00000; /* Red color for delete */
+    background-color: #d00000;
     color: #fff;
     border-radius: 10px;
     padding: 12px 20px;
@@ -256,7 +243,7 @@ button {
     font-weight: bold;
     text-align: center;
     width: 100%;
-    margin-top: 20px; /* Space from exercises */
+    margin-top: 20px;
     display: block;
 }
 
@@ -267,23 +254,23 @@ button {
     padding: 15px;
     margin-bottom: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    position: relative; /* For positioning delete button */
+    position: relative;
 }
 
 .exercise-card .exercise-header {
     display: flex;
     align-items: center;
-    gap: 10px; /* Adjust as needed for spacing */
+    gap: 10px;
     margin-bottom: 15px;
-    padding-inline-end: 35px; /* Give space for the delete button */
-    position: relative; /* To contain the h3 and button */
+    padding-inline-end: 35px;
+    position: relative;
 }
 
 .exercise-card .exercise-header h3 {
     font-size: 16px;
     color: #333;
     margin: 0;
-    flex-grow: 1; /* Allows h3 to take available space */
+    flex-grow: 1;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -310,7 +297,7 @@ button {
 
 .sets-table {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 0.5fr; /* SET, KG, REPS, Delete/Add Options */
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
     gap: 10px;
     font-size: 14px;
     color: #555;
@@ -362,13 +349,13 @@ button {
     align-items: center;
     justify-content: center;
     color: #fff;
-    cursor: pointer; /* Make it clickable */
+    cursor: pointer;
 }
 
-.set-type-display.warm-up { background-color: #FFC107; } /* Amber */
-.set-type-display.normal { background-color: #007aff; } /* Blue */
-.set-type-display.failure { background-color: #dc3545; } /* Red */
-.set-type-display.drop-set { background-color: #6f42c1; } /* Purple */
+.set-type-display.warm-up { background-color: #FFC107; }
+.set-type-display.normal { background-color: #007aff; }
+.set-type-display.failure { background-color: #dc3545; }
+.set-type-display.drop-set { background-color: #6f42c1; }
 
 .sets-table .delete-set-button {
     background: none;
@@ -442,8 +429,8 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Ensure it spans full width */
-    font-size: 16px; /* Adjust font size */
+    width: 100%;
+    font-size: 16px;
     color: #333;
     font-weight: bold;
     cursor: pointer;
@@ -457,14 +444,14 @@ button {
 
 .rest-timer-display-button span {
     flex-grow: 1;
-    text-align: start; /* Align text to the start */
+    text-align: start;
 }
 
 #displayRestTimer {
-    font-size: 18px; /* Slightly larger for the actual time */
+    font-size: 18px;
     color: #333;
-    min-width: 60px; /* Ensure space for timer */
-    text-align: end; /* Align time to the end */
+    min-width: 60px;
+    text-align: end;
 }
 
 
@@ -475,11 +462,11 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dim background */
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Align to bottom */
-    z-index: 1000; /* Ensure it's on top */
+    align-items: flex-end;
+    z-index: 1000;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -493,19 +480,18 @@ button {
 .action-sheet-content {
     background-color: #fff;
     width: 100%;
-    /* هنا أيضاً، إذا كنت تريد أن يملأ الـ Action Sheet العرض الكامل على الشاشات الكبيرة، أزل max-width */
     max-width: 400px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding: 20px;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
-    transform: translateY(100%); /* Start off-screen */
+    transform: translateY(100%);
     transition: transform 0.3s ease-in-out;
-    padding-bottom: calc(30px + env(safe-area-inset-bottom)); /* Extra padding for devices with safe areas */
+    padding-bottom: calc(30px + env(safe-area-inset-bottom));
 }
 
 .action-sheet-overlay.visible .action-sheet-content {
-    transform: translateY(0%); /* Slide in */
+    transform: translateY(0%);
 }
 
 .action-sheet-content h2 {
@@ -530,8 +516,8 @@ button {
     padding: 0;
     margin: 0;
     border-radius: 12px;
-    overflow: hidden; /* For inner borders */
-    background-color: #f9f9f9; /* Slightly different background for list */
+    overflow: hidden;
+    background-color: #f9f9f9;
 }
 
 .action-sheet-content .action-list li {
@@ -571,10 +557,10 @@ button {
 .action-sheet-content .action-list li .normal { background-color: #007aff; }
 .action-sheet-content .action-list li .failure { background-color: #dc3545; }
 .action-sheet-content .action-list li .drop-set { background-color: #6f42c1; }
-.action-sheet-content .action-list li .remove { background-color: #6c757d; } /* Grey for remove */
+.action-sheet-content .action-list li .remove { background-color: #6c757d; }
 
 .action-sheet-content .action-list li.remove-option {
-    color: #dc3545; /* Red text for remove option */
+    color: #dc3545;
 }
 
 .action-sheet-content .help-icon {
@@ -596,14 +582,14 @@ button {
 
 /* Specific styling for rest timer options */
 .rest-timer-options-list li {
-    justify-content: center; /* Center the time values */
+    justify-content: center;
 }
 .rest-timer-options-list li.selected {
-    background-color: #e6f2ff; /* Highlight selected option */
+    background-color: #e6f2ff;
     color: #007aff;
     font-weight: bold;
 }
 .rest-timer-options-list li .fas.fa-check {
     color: #007aff;
-    margin-left: auto; /* Push checkmark to the right */
+    margin-left: auto;
 }
