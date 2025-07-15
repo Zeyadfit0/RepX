@@ -1,15 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("service-worker.js")
-          .then((reg) => {
-            console.log("Service worker registered.", reg);
-          })
-          .catch((err) => {
-            console.error("Service worker registration failed:", err);
-          });
-      }
+    if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+    }
       
     // --- Screen Elements ---
     const homeScreen = document.getElementById('homeScreen');
